@@ -4,14 +4,14 @@ import {Provider} from "react-redux";
 import {store} from "./store/store.ts";
 import './index.css'
 import App from './App.tsx'
-import {BrowserRouter} from "react-router";
+import {HashRouter} from "react-router";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/job-app-v2">
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </StrictMode>,
 )
