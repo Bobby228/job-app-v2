@@ -1,4 +1,5 @@
-import {Badge, Box, Card, Group, Text, Title} from "@mantine/core";
+import {Box, Card, Group, Text, Title} from "@mantine/core";
+import renderSpace from "../../utils/renderSpace.tsx";
 import type {Job} from "../../types.ts";
 
 
@@ -8,54 +9,7 @@ interface JobCardTemplateProps {
 }
 
 const JobCardTemplate = ({ job, children }: JobCardTemplateProps) => {
-  const renderSpace = (space: string) => {
-    switch (space) {
-      case 'remote':
-        return (
-          <Badge
-            mb={8}
-            px={6}
-            py={1}
-            radius={3}
-            bg="rgba(66, 99, 235, 1)"
-            c="white"
-          >
-            можно удалённо
-          </Badge>
-        );
 
-      case 'office':
-        return (
-          <Badge
-            mb={8}
-            px={6}
-            py={1}
-            radius={3}
-            bg="rgba(15, 15, 16, 0.1)"
-            c="rgba(15, 15, 16, 0.5)"
-          >
-            офис
-          </Badge>
-        );
-
-      case 'hybrid':
-        return (
-          <Badge
-            mb={8}
-            px={6}
-            py={1}
-            radius={3}
-            bg="black"
-            c="white"
-          >
-            гибрид
-          </Badge>
-        );
-
-      default:
-        return null;
-    }
-  };
   return (
     <Card w={659} padding="lg" radius="md" mb="md">
       <Box mb={16}>

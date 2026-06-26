@@ -1,4 +1,4 @@
-import {Tabs, } from "@mantine/core";
+import {Tabs} from "@mantine/core";
 import {useLocation, useNavigate} from "react-router";
 
 
@@ -13,7 +13,8 @@ const CityTabs = () => {
       : 'all';
 
   return (
-    <Tabs w={337}
+    <Tabs
+      w={337}
       value={value}
       onChange={(value) => navigate(`/vacancies/${value}`)}
     >

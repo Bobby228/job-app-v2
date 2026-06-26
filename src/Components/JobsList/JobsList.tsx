@@ -59,11 +59,10 @@ const JobsList = () => {
     <Flex mih="100vh" pt={24} pb={84} gap={24}>
       <Flex direction="column" gap={28}>
         <SkillsInput />
-
-        <CityTabs />
       </Flex>
 
       <Flex direction="column" gap={24}>
+        <CityTabs />
         {isLoading ?
           <Title>Загрузка...</Title>
           :

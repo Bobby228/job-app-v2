@@ -14,8 +14,6 @@ const JobPage = () => {
       .then(data => setJob(data.job))
   }, [id]);
 
-  // if (!job) return <div>Загрузка</div>;
-
   return (
     <Box pt={24} h='92vh'>
       <Container p={0} strategy="block" size={1000}>
